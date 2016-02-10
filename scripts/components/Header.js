@@ -1,11 +1,8 @@
 import React from 'react';
 
 // Header
-var Header = React.createClass({
-  propTypes : {
-    tagline : React.PropTypes.string.isRequired
-  },
-  render : function() {
+class Header extends React.Component {
+  render() {
     return (
       <header className='top'>
         <h1>Catch
@@ -19,6 +16,10 @@ var Header = React.createClass({
       </header>
     )
   }
-});
+}
+
+Header.propTypes = {
+  tagline : React.PropTypes.string.isRequired
+}
 
 export default Header;
